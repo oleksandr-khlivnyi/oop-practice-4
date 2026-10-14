@@ -1,0 +1,69 @@
+#include <iostream> 
+
+#include <cstdlib> 
+
+#include <ctime> 
+
+ 
+
+using namespace std; 
+
+ 
+
+int main() { 
+
+    int n; 
+
+    double arr[100]; 
+
+    int zeroCount = 0; 
+
+    double maxElement; 
+
+ 
+
+    cin >> n; 
+
+ 
+
+    srand(time(0)); 
+
+    for (int i = 0; i < n; i++) { 
+
+        arr[i] = rand() % 10;  
+
+        cout << arr[i] << " "; 
+
+    } 
+
+    cout << endl; 
+
+ 
+
+    maxElement = arr[0]; 
+
+    for (int i = 0; i < n; i++) { 
+
+        if (arr[i] > maxElement) { 
+
+            maxElement = arr[i]; 
+
+        } 
+
+        if (arr[i] == 0) { 
+
+            zeroCount++; 
+
+        } 
+
+    } 
+
+ 
+
+    cout << maxElement + zeroCount << endl; 
+
+ 
+
+    return 0; 
+
+}
